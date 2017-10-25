@@ -29,10 +29,10 @@ int main()
 {
     int angka[20],err,faktorial=0,i;
     char space;
-    while(true)
+    while(1)
     {
 
-        scanf ("%d%c",angka[faktorial],space);
+        scanf ("%d%c",&angka[faktorial],&space);
         faktorial++;
         if (space == ' ')
         {
