@@ -4,7 +4,6 @@
 #include <netinet/in.h>
 #include <unistd.h>
 
-pthread_t tid[20];
 void *counting(void *faktorial)
 {
     int i,j,k=1;
@@ -26,6 +25,7 @@ void *counting(void *faktorial)
 
 int main()
 {
+    pthread_t tid[20];
     int angka[20],err,faktorial=0,i;
     char space;
     while(1)
@@ -41,7 +41,7 @@ int main()
     }
     for (i=0;i<faktorial;i++)
     {
-        err=pthread_create(&(tid[i]),NULL,&counting,(void*) angka[i]));//membuat thread
+        err=pthread_create( &tid[i], NULL, counting, (void*) angka[i]);//membuat thread
         if(err!=0)//cek error
         {
             printf("\n can't create thread : [%d]",err);
