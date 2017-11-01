@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <netinet/in.h>
 #include <unistd.h>
+#include <pthread.h> //library thread
 
 void *counting(void *faktorial)
 {
