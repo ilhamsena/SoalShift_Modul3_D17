@@ -7,20 +7,20 @@
 
 void *counting(void *faktorial)
 {
-    int i,j,k=1;
+    int i,j,k=1,*a;
     int a=(int)faktorial;
-    if (a<0)
+    if (*a<0)
     {
         printf ("Error\n");
     }
     else
     {
 
-        for (i=a;i>=1;i--)
+        for (i=*a;i>=1;i--)
         {
             k = k*i;
         }
-        printf ("hasil %d!= %d",a,k);
+        printf ("hasil %d!= %d",*a,k);
     }
 }
 
@@ -42,7 +42,7 @@ int main()
     }
     for (i=0;i<faktorial;i++)
     {
-        err=pthread_create( &tid[i], NULL, counting, (void*) angka[i]);//membuat thread
+        err=pthread_create( &tid[i], NULL, counting, (void*) &angka[i]);//membuat thread
         if(err!=0)//cek error
         {
             printf("\n can't create thread : [%d]",err);
