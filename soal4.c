@@ -48,7 +48,11 @@ int main()
             printf("\n can't create thread : [%s]",strerror(err));
             exit(EXIT_FAILURE);
         }
-        pthread_join(tid[i],NULL);
+        
+    }
+    for (i=0;i<faktorial;i++)
+    {
+           pthread_join(tid[i],NULL);
     }
     exit(EXIT_SUCCESS);
 }
