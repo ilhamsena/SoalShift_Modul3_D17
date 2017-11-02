@@ -8,7 +8,7 @@
 void *counting(void *faktorial)
 {
     int i,j,k=1,a;
-    int a=(int)faktorial;
+    a=(int)faktorial;
     if (a<0)
     {
         printf ("Error\n");
