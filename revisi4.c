@@ -18,7 +18,7 @@ void *counting(void *faktorial)
 
         for (i=a;i>=1;i--)
         {
-            k = ki;
+            k = k*i;
         }
         printf ("hasil %d!= %d",a,k);
     }
